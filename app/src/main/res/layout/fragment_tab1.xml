@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:background="#ffffff">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_lsd"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_lsd"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_bird_up"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_bird_up"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_cherokee_chicks"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_cherokee_chicks"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_legalize_ranch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_legalize_ranch"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_bases"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_bases"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_bill_cosby"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_bill_cosby"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_cameras"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_cameras"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_hoky_poky"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_hokey_pokey"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_octopus"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_octopus"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_benghazi"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_benghazi"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_mein_kampf"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_mein_kampf"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_mom_and_dad"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_mom_and_dad"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_monkeys"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_monkeys"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_narcoleptic"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_narcolepsy"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_octomom"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_octomom"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_on_wet"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_on_wet"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_oriental"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_oriental"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_societys_lies"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_societys_lies"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_sup_mello"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_sup_mello"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_taxes"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_taxes"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_vacuum"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_vacuum"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_vertical"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_ranch_it_up"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_ranch_it_up"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_john_wayne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_john_wayne"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_hebrew"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_hebrew"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_pizza_ball"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_pizza_ball"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_schindlers_list"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_schindlers_list"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_well_be_right_back"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_well_be_right_back"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_yes_guy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_yes_guy"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_l_ron_hubbard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_l_ron_hubbard"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_yahboobay_short"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_yahboobay_short"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+            <Button
+                android:id="@+id/button_yahboobay_long"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:height="80dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/string_yahboobay_long"
+                android:textColor="@android:color/white"
+                android:onClick="playSoundEffect"/>
+
+        </TableRow>
+
+        <!--
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="50dp"/>
+        -->
+
+    </TableLayout>
+</ScrollView>

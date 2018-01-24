@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.3/7d7f60c4783872861222166f6164215f8951c7b1/common-1.0.3.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7d7f60c4783872861222166f6164215f8951c7b1">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/b5b7106caf258fafa64c0e0031eebfb1/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="42c9659c973e311ffdb645ed057e5053e0ab5c78">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/e3c052a810f68f09ba43b20110f8127b/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e6aeff19a2ce1eb896557be73cb9ceb56f8d1cf3">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.8.0.aar/f4f1c7c760643164fabaa77382f36b0c/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="aeca0a0ab86831ec59a54723205ce9341ac22d1b">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/e45ee3450e6c4044c16073e0a0114ec3/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="618f75fe11febf263e3234c7da7dc892232a5608">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.8.0.aar/3d7c4717ba75d31466dbab71e7a6013a/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="264ad23f9752aabecfa41115c52a25a023a08839">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/cb89daf1ab599d612ed3ef35f0e7d589/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9296d6f092fcdba4fafb6ac26546a39babdab46a">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c4ea4416ebdd810aeaa6cdee19c2b00f/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fe3916317a699975bcce0cba2d13fd2d8cf88922">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.0.2/b9ef4342c934a1a8b107506273dc8061662a322/support-annotations-27.0.2.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0b9ef4342c934a1a8b107506273dc8061662a322">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/18fdf1c6502352f540999f8973611728/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="25c8cb628374f9a2d59ff9e1172753751e9a9f84">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/34ee5d4ccbe445f831a37d5d4aa88889/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="04cd0cacbedcb338f64665b88bad64d145325fbd">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/26f1d31c7cca4766ebaccb1cb874b0b3/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="caa03787689212c10939f308a55a8dc8a3333ed2">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.8.0.aar/b8ab3f1cca64c16a4c287a25c2ce95a1/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a7760a45a6c9f425aaa43ef391a8cf28a8bcb4a1">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.8.0.aar/2b25db778688b684c7ca994ff1827e9e/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="122de0d704f76d2bb5cb9db66e00fe90a0a41e78">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/b7f7dc69f9d9fc663da1a6e72582cbeb/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b432e82447a3af781e927b9ba0bbb9fe2a496d4a">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/82a02f42cde397dc6f23c67497107361/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="031cc16b7b6e77b3c050134ecab9fa5c2640a069">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/5699f54850f03df389c1b5bcee99fa5d/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/2ea86641c9dc8873034d69fb030bcb28/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/500f482ec076f065dd07127e1d2d6b90/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bcd0bcdef85b31a656af76e39c0c95ce70800772">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/1f17ad7274439551ca1b041b7ccd5c07/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5ad3911825107d8dd4b017fdecebfd23c08048dd">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/adc0859167d2a531848af42c7932a44c/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ed6560f31a6a40b5965f5879d8f2eab1f68def05">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/120804f0671db4761b30944586e88a68/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.8.0.aar/2ce582fd62158e32ee8d8a3af2439404/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="24cb9bae5fbe94df0f55d87452a291b69a2f22bf">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/25615de205de62a38e7157bffc3e2fce/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ac2ce6027755bcf49442e70597bec0feb9064f68">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/alexanderpowell/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/264296a10e42da678aba3b8c1017833c/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a5fa2e3704f51b30b7b47e12a3a2909728799583">
+        <dex dex="/Users/alexanderpowell/Desktop/android/EricAndreSoundboard/app/build/intermediates/transforms/preDex/release/16.jar" />
+    </item>
+
+</items>
