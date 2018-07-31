@@ -9,24 +9,18 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.media.MediaPlayer;
 import android.media.AudioManager;
-import android.content.Context;
-import android.widget.RelativeLayout;
-import android.widget.SeekBar;
-import com.inmobi.ads.InMobiBanner;
-import com.inmobi.sdk.InMobiSdk;
-
 import java.util.Random;
-
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdView;
-import com.inmobi.sdk.InMobiSdk;
+import com.google.android.gms.ads.AdRequest;
 
-public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentInteractionListener,Tab2.OnFragmentInteractionListener,Tab3.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentInteractionListener, Tab2.OnFragmentInteractionListener, Tab3.OnFragmentInteractionListener {
 
     private MediaPlayer mediaPlayer = null;
-    //private AdView mAdView;
-    private InMobiBanner mBannerAd;
+    private AdView mAdView;
+    private int adCount;
 
-    int[] all_sounds = {
+    private int[] all_sounds = {
             R.raw.bases,
             R.raw.benghazi,
             R.raw.bill_cosby,
@@ -68,9 +62,7 @@ public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentIn
 
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
         tabLayout.addTab(tabLayout.newTab().setText("Eric-isms"));
-        //tabLayout.addTab(tabLayout.newTab().setText("Other"));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_settings_white_24dp));
-        //tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -97,58 +89,14 @@ public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentIn
             }
         });
 
-        //final AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
-        //int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-        //int curVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-        //SeekBar volControl = (SeekBar)findViewById(R.id.volumeBar);
-        //volControl.setMax(maxVolume);
-        //volControl.setProgress(curVolume);
-        /*volControl.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onStopTrackingTouch(SeekBar arg0) {
-            }
+        // Test id: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(this, "ca-app-pub-5814930972383991~8101143382");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
-            @Override
-            public void onStartTrackingTouch(SeekBar arg0) {
-            }
-
-            @Override
-            public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, arg1, 0);
-            }
-        });*/
-
-        //MobileAds.initialize(this, "ca-app-pub-0710201817886691~3983909486");
-        //mAdView = findViewById(R.id.adView);
-        //AdRequest adRequest = new AdRequest.Builder().build();
-        //mAdView.loadAd(adRequest);
-
-        InMobiSdk.init(this, "2ca6a108ab184b07a2cbb66f83257f3f");
-        //1517406889137L
-        //1516142249488L
-        mBannerAd = new InMobiBanner(MainActivity.this, 1516142249488L);
-        mBannerAd.setRefreshInterval(60);
-        RelativeLayout adContainer = (RelativeLayout) findViewById(R.id.ad_container);
-        mBannerAd.setAnimationType(InMobiBanner.AnimationType.ROTATE_HORIZONTAL_AXIS);
-        //mBannerAd.setRefreshInterval(60);
-
-        setBannerLayoutParams();
-        adContainer.addView(mBannerAd);
-        mBannerAd.load();
-    }
-
-    private void setBannerLayoutParams() {
-        int width = toPixelUnits(320);
-        int height = toPixelUnits(50);
-        RelativeLayout.LayoutParams bannerLayoutParams = new RelativeLayout.LayoutParams(width, height);
-        bannerLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        bannerLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        mBannerAd.setLayoutParams(bannerLayoutParams);
-    }
-
-    private int toPixelUnits(int dipUnit) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dipUnit * density);
+        // Initalize adCount var to zero
+        adCount = 0;
     }
 
     @Override
@@ -157,6 +105,13 @@ public class MainActivity extends AppCompatActivity implements Tab1.OnFragmentIn
     }
 
     public void playSoundEffect(View view) {
+
+        if (adCount == 5) {
+            adCount = 0;
+            // Play add and return
+        } else {
+            adCount++;
+        }
 
         // Needed to prevent memory errors
         if (mediaPlayer != null) {
