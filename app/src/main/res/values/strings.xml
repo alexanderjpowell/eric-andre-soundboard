@@ -2,6 +2,7 @@
     <string name="app_name">Eric Andre Soundboard</string>
     <string name="tab_text_1">Eric-isms</string>
     <string name="tab_text_2">Settings</string>
+    <string name="tab_text_3">Favorites</string>
 
     <string name="share_app_body">Download the Eric Andre soundboard to play all your favorite Eric Andre quotes anytime and anywhere: </string>
     <string name="share_app_url">https://play.google.com/store/apps/details?id=com.soundboards.alexanderpowell.ericandresoundboard</string>

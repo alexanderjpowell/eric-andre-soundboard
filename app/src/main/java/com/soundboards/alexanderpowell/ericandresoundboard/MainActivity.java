@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         @StringRes
-        private final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+        private final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
 
         private SectionsPagerAdapter(FragmentManager fm) {
             super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                     return new SoundsTab();
                 case 1:
                     return new SettingsTab();
+                case 2:
+                    return new FavoritesTab();
                 default:
                     return new Fragment();
             }
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
     }
 }
