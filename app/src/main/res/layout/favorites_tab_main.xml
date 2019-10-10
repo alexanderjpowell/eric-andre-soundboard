@@ -8,83 +8,18 @@
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollViewHome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp">
 
-        <LinearLayout
+        <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/shareButton"
-                    android:layout_weight="0.5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:height="80dp"
-                    android:text="@string/share_button_text"
-                    android:textSize="17sp"
-                    android:textColor="@android:color/white"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/suggestNewSoundButton"
-                    android:layout_weight="0.5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:height="80dp"
-                    android:text="@string/suggest_sound_button_text"
-                    android:textSize="17sp"
-                    android:textColor="@android:color/white"/>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="1dp"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="21sp"
-                android:textColor="@color/black"
-                android:text="@string/thanks_textView_text"/>
-
-            <Space
-                android:layout_width="1dp"
-                android:layout_height="10dp"/>
-
-            <Button
-                android:id="@+id/randomSoundButton"
-                android:layout_weight="1"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_margin="6dp"
-                android:height="80dp"
-                android:text="@string/string_random"
-                android:textSize="17sp"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Favorites"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:paddingStart="10dp"
-                android:paddingEnd="0dp"/>
-
-        </LinearLayout>
+            android:layout_marginTop="4dp"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"/>
 
     </ScrollView>
 
