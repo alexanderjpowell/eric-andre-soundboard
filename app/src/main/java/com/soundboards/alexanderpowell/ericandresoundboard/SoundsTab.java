@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.io.FileDescriptor;
 
 public class SoundsTab extends Fragment implements View.OnClickListener, View.OnLongClickListener {
@@ -91,7 +90,7 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
             tableLayout.addView(tableRow);
         }
 
-        FloatingActionButton floatingActionButton = requireView().findViewById(R.id.floatingActionButton);
+        /*FloatingActionButton floatingActionButton = requireView().findViewById(R.id.floatingActionButton);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +99,7 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
                     mediaPlayer.stop();
                 }
             }
-        });
+        });*/
     }
 
     @Override
