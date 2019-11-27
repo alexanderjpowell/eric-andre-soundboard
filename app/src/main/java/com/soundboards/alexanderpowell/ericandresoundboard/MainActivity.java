@@ -1,8 +1,9 @@
 package com.soundboards.alexanderpowell.ericandresoundboard;
 
+import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.util.Log;
 import com.google.android.material.tabs.TabLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +22,14 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class MainActivity extends AppCompatActivity {
 
-    private AdView mAdView;
+    public static String[] filenames;
+
+    public static final int BUTTON_HEIGHT_PIXELS = 350;
+    public static final int BUTTON_MARGIN_SMALL = 15;
+    public static final int BUTTON_MARGIN_LARGE = 30;
+    public static final int TABLE_ROW_WIDTH = 0;
+    public static final int TABLE_ROW_HEIGHT = 0;
+    public static final float TABLE_ROW_WEIGHT = 1f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
@@ -88,12 +96,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        try {
+            AssetManager am = getAssets();
+            filenames = am.list("sounds");
+            for (int i = 0; i < filenames.length; i++) {
+                Log.v("MainActivity", filenames[i]);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    /*private void printPreferences() {
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        Set set = sharedPreferences.getStringSet("favorites", new HashSet<String>());
+        Toast.makeText(getApplicationContext(), set.toString(), Toast.LENGTH_LONG).show();
+    }*/
+
+    public static String formatFileString(String filename) {
+        return filename.replaceAll("_", " ").replace(".mp3", "");
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         @StringRes
-        private final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+        private final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
 
         private SectionsPagerAdapter(FragmentManager fm) {
             super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
@@ -107,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                     return new SoundsTab();
                 case 1:
                     return new SettingsTab();
-                //case 2:
-                //    return new FavoritesTab();
+                case 2:
+                    return new FavoritesTab();
                 default:
                     return new Fragment();
             }
@@ -122,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
     }
 }

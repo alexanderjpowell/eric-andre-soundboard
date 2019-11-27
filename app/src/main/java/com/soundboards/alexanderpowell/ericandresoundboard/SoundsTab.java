@@ -1,5 +1,8 @@
 package com.soundboards.alexanderpowell.ericandresoundboard;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,9 +15,18 @@ import android.widget.TableRow;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.button.MaterialButton;
 import java.io.FileDescriptor;
+import java.util.HashSet;
+import java.util.Set;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.BUTTON_HEIGHT_PIXELS;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.BUTTON_MARGIN_LARGE;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.BUTTON_MARGIN_SMALL;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.TABLE_ROW_HEIGHT;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.TABLE_ROW_WEIGHT;
+import static com.soundboards.alexanderpowell.ericandresoundboard.MainActivity.TABLE_ROW_WIDTH;
 
 public class SoundsTab extends Fragment implements View.OnClickListener, View.OnLongClickListener {
 
@@ -29,15 +41,7 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        final int BUTTON_HEIGHT_PIXELS = 350;
-        final int BUTTON_MARGIN_SMALL = 15;
-        final int BUTTON_MARGIN_LARGE = 30;
-        final int TABLE_ROW_WIDTH = 0;
-        final int TABLE_ROW_HEIGHT = 0;
-        final float TABLE_ROW_WEIGHT = 1f;
-
-        final String[] sound_titles = requireActivity().getResources().getStringArray(R.array.sound_titles);
-        sound_file_names = requireActivity().getResources().getStringArray(R.array.sound_file_names);
+        sound_file_names = MainActivity.filenames;
 
         TableLayout tableLayout = requireView().findViewById(R.id.tableLayout);
         tableLayout.setStretchAllColumns(true);
@@ -46,7 +50,7 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
         TableRow tableRow;
         MaterialButton buttonLeft, buttonRight;
 
-        for (int i = 0; i < sound_titles.length; i+=2) {
+        for (int i = 0; i < sound_file_names.length; i+=2) {
             tableRow = new TableRow(getContext());
             ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -76,15 +80,17 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
             buttonLeft.setOnLongClickListener(this);
             buttonRight.setOnLongClickListener(this);
 
+            // Left
             buttonLeft.setId(i);
-            buttonRight.setId(i + 1);
-
-            buttonLeft.setText(sound_titles[i]);
-            buttonRight.setText(sound_titles[i + 1]);
-
-            // Add the buttons to the row
+            buttonLeft.setText(MainActivity.formatFileString(sound_file_names[i]));
             tableRow.addView(buttonLeft);
-            tableRow.addView(buttonRight);
+
+            // Right
+            if ((i + 1) < sound_file_names.length) {
+                buttonRight.setId(i + 1);
+                buttonRight.setText(MainActivity.formatFileString(sound_file_names[i + 1]));
+                tableRow.addView(buttonRight);
+            }
 
             // Add the row to the table
             tableLayout.addView(tableRow);
@@ -107,6 +113,41 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
         playSound(sound_file_names[view.getId()]);
     }
 
+    @Override
+    public boolean onLongClick(final View view) {
+
+        final SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        //Toast.makeText(getContext(), sound_file_names[view.getId()], Toast.LENGTH_SHORT).show();
+
+        //
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("Add to favorites");//.setTitle("title");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                //SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+                //SharedPreferences.Editor editor = sharedPreferences.edit();
+                Set<String> favoritesSet = sharedPreferences.getStringSet("favorites", new HashSet<String>());
+                //Toast.makeText(getContext(), Integer.toString(favoritesSet.size()), Toast.LENGTH_SHORT).show();
+                favoritesSet.add(sound_file_names[view.getId()]);
+                editor.clear();
+                editor.putStringSet("favorites", favoritesSet);
+                editor.apply();
+            }
+        });
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        //
+
+        return true;
+    }
+
     private void playSound(String filename) {
         //
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
@@ -120,7 +161,7 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
         }
         try {
             if (getActivity() != null) {
-                AssetFileDescriptor assetFileDescriptor = getActivity().getAssets().openFd(filename);
+                AssetFileDescriptor assetFileDescriptor = getActivity().getAssets().openFd("sounds/" + filename);
                 FileDescriptor fileDescriptor = assetFileDescriptor.getFileDescriptor();
                 long startOffset = assetFileDescriptor.getStartOffset();
                 long length = assetFileDescriptor.getLength();
@@ -130,13 +171,9 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "ERROR", Toast.LENGTH_LONG).show();
         }
-    }
-
-    @Override
-    public boolean onLongClick(View view) {
-        return true;
     }
 
 }

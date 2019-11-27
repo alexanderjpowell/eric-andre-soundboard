@@ -29,7 +29,8 @@ public class SettingsTab extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        sound_file_names = requireActivity().getResources().getStringArray(R.array.sound_file_names);
+        //sound_file_names = requireActivity().getResources().getStringArray(R.array.sound_file_names);
+        sound_file_names = MainActivity.filenames;
 
         MaterialButton shareButton = requireActivity().findViewById(R.id.shareButton);
         MaterialButton suggestSoundButton = requireActivity().findViewById(R.id.suggestNewSoundButton);
@@ -84,7 +85,7 @@ public class SettingsTab extends Fragment implements View.OnClickListener {
         }
         try {
             if (getActivity() != null) {
-                AssetFileDescriptor assetFileDescriptor = getActivity().getAssets().openFd(filename);
+                AssetFileDescriptor assetFileDescriptor = getActivity().getAssets().openFd("sounds/" + filename);
                 FileDescriptor fileDescriptor = assetFileDescriptor.getFileDescriptor();
                 long startOffset = assetFileDescriptor.getStartOffset();
                 long length = assetFileDescriptor.getLength();

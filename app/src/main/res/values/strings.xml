@@ -18,7 +18,11 @@
 
     <string name="string_random">Random Eric</string>
 
-    <string-array name="sound_titles">
+    <string name="preference_file_key">com.soundboards.alexanderpowell.ericandresoundboard.PREFERENCE_FILE_KEY</string>
+
+    <string name="empty_favorites_text">Long click a sound to \nadd to favorites</string>
+
+    <!--<string-array name="sound_titles">
         <item>LSD</item>
         <item>Bird Up</item>
         <item>Cherokee Chicks</item>
@@ -51,26 +55,26 @@
         <item>Yah Boo Bay (short)</item>
         <item>Yah Boo Bay (long)</item>
         <item>Yesss!</item>
-    </string-array>
+    </string-array>-->
 
-    <string-array name="sound_file_names">
+    <!--<string-array name="sound_file_names">
         <item>lsd.mp3</item>
         <item>bird_up.mp3</item>
-        <item>cherokee_beer.mp3</item>
+        <item>cherokee_chicks.mp3</item>
         <item>legalize_ranch.mp3</item>
         <item>bases.mp3</item>
         <item>bill_cosby.mp3</item>
         <item>cameras.mp3</item>
         <item>hokey_pokey.mp3</item>
-        <item>i_am_the_octopus.mp3</item>
-        <item>benghazi.mp3</item>
+        <item>octopus.mp3</item>
+        <item>\#_benghazi.mp3</item>
         <item>mein_kampf.mp3</item>
         <item>mom_and_dad.mp3</item>
         <item>monkeys.mp3</item>
         <item>narcoleptic.mp3</item>
         <item>octomom.mp3</item>
         <item>on_wet.mp3</item>
-        <item>oriental_background.mp3</item>
+        <item>oriental.mp3</item>
         <item>societies_lies.mp3</item>
         <item>sup_mello.mp3</item>
         <item>taxes.mp3</item>
@@ -86,6 +90,6 @@
         <item>yahboobay_short.mp3</item>
         <item>yahboobay_long.mp3</item>
         <item>yes_guy.mp3</item>
-    </string-array>
+    </string-array>-->
 
 </resources>
