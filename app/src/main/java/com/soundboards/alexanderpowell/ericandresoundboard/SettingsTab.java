@@ -29,7 +29,6 @@ public class SettingsTab extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        //sound_file_names = requireActivity().getResources().getStringArray(R.array.sound_file_names);
         sound_file_names = MainActivity.filenames;
 
         MaterialButton shareButton = requireActivity().findViewById(R.id.shareButton);

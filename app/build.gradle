@@ -6,8 +6,8 @@ android {
         applicationId "com.soundboards.alexanderpowell.ericandresoundboard"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 27
-        versionName "2.7.0"
+        versionCode 271
+        versionName "2.7.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

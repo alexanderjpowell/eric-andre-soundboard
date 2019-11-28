@@ -63,15 +63,18 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
 
             // Left hand buttons
             TableRow.LayoutParams buttonLayoutParamsLeft = new TableRow.LayoutParams(TABLE_ROW_WIDTH, TABLE_ROW_HEIGHT, TABLE_ROW_WEIGHT);
-            buttonLayoutParamsLeft.height = BUTTON_HEIGHT_PIXELS;
+            buttonLayoutParamsLeft.height = ViewGroup.LayoutParams.MATCH_PARENT;
             buttonLayoutParamsLeft.setMarginStart(BUTTON_MARGIN_LARGE);
             buttonLayoutParamsLeft.setMarginEnd(BUTTON_MARGIN_SMALL);
 
             // Right hand buttons
             TableRow.LayoutParams buttonLayoutParamsRight = new TableRow.LayoutParams(TABLE_ROW_WIDTH, TABLE_ROW_HEIGHT, TABLE_ROW_WEIGHT);
-            buttonLayoutParamsRight.height = BUTTON_HEIGHT_PIXELS;
+            buttonLayoutParamsRight.height = ViewGroup.LayoutParams.MATCH_PARENT;
             buttonLayoutParamsRight.setMarginStart(BUTTON_MARGIN_SMALL);
             buttonLayoutParamsRight.setMarginEnd(BUTTON_MARGIN_LARGE);
+
+            buttonLeft.setHeight(BUTTON_HEIGHT_PIXELS);
+            buttonRight.setHeight(BUTTON_HEIGHT_PIXELS);
 
             buttonLeft.setLayoutParams(buttonLayoutParamsLeft);
             buttonRight.setLayoutParams(buttonLayoutParamsRight);
@@ -96,16 +99,6 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
             tableLayout.addView(tableRow);
         }
 
-        /*FloatingActionButton floatingActionButton = requireView().findViewById(R.id.floatingActionButton);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-                    mediaPlayer.stop();
-                }
-            }
-        });*/
     }
 
     @Override
@@ -118,18 +111,13 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
 
         final SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
-        //Toast.makeText(getContext(), sound_file_names[view.getId()], Toast.LENGTH_SHORT).show();
 
-        //
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage("Add to favorites");//.setTitle("title");
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK button
-                //SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-                //SharedPreferences.Editor editor = sharedPreferences.edit();
                 Set<String> favoritesSet = sharedPreferences.getStringSet("favorites", new HashSet<String>());
-                //Toast.makeText(getContext(), Integer.toString(favoritesSet.size()), Toast.LENGTH_SHORT).show();
                 favoritesSet.add(sound_file_names[view.getId()]);
                 editor.clear();
                 editor.putStringSet("favorites", favoritesSet);
@@ -143,7 +131,6 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
         });
         AlertDialog dialog = builder.create();
         dialog.show();
-        //
 
         return true;
     }
@@ -171,8 +158,8 @@ public class SoundsTab extends Fragment implements View.OnClickListener, View.On
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            //Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
-            Toast.makeText(getContext(), "ERROR", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getContext(), "ERROR", Toast.LENGTH_LONG).show();
         }
     }
 

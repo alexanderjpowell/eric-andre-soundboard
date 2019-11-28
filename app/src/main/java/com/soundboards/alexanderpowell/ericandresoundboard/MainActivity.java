@@ -3,7 +3,6 @@ package com.soundboards.alexanderpowell.ericandresoundboard;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.util.Log;
 import com.google.android.material.tabs.TabLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static String[] filenames;
 
-    public static final int BUTTON_HEIGHT_PIXELS = 350;
+    public static final int BUTTON_HEIGHT_PIXELS = 300;
     public static final int BUTTON_MARGIN_SMALL = 15;
     public static final int BUTTON_MARGIN_LARGE = 30;
     public static final int TABLE_ROW_WIDTH = 0;
@@ -97,11 +96,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         try {
-            AssetManager am = getAssets();
-            filenames = am.list("sounds");
-            for (int i = 0; i < filenames.length; i++) {
-                Log.v("MainActivity", filenames[i]);
-            }
+            AssetManager assetManager = getAssets();
+            filenames = assetManager.list("sounds");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
